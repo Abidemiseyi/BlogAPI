@@ -4,7 +4,10 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 
 urlpatterns = [
-    path('', views.task_list),
-    path('<int:pk>/', views.task_detail),
-    path('create/', views.task_create),
+    path('login/', views.login),
+    path('user/', views.get_user_details),
+    path('register/', views.register),
+    path('', views.list_blog),
+    path('<int:pk>/', views.blog_details),
+    path('create/', views.create_blog),
 ]
